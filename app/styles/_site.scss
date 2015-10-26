@@ -1,0 +1,78 @@
+/*==============================================
+=        BEGINS ::  Admin Landlord Section     =
+==============================================*/
+.admin-landlord {
+	
+	//Top Header
+	header	{
+		@include span-columns(12);
+		background-color: $DarkPurple;
+		height: em(95);
+
+	}
+
+	.site-ctn-wrap {
+		@include outer-container(100%);
+
+		
+		nav {
+			@include span-columns(3 of 12, block-collapse);
+			background-color: $LightGrey;
+			height: 100vh;
+			
+			li {
+				text-align: center;
+
+				&:hover {
+					background-color: $LimeGreen;
+
+				}
+
+				a {
+				color: $DarkGrey;
+				font-size: $StandardTxt;
+				line-height: em(40);
+				text-align: center;
+				display: block;
+				transition: none;
+
+
+					&:hover {
+						color: #FFF;
+						background-color: $LimeGreen;
+					}
+			}
+			}
+
+
+
+				//Mobile
+				@include media($mobile) {
+					display: none;
+
+				}
+
+		}
+
+		main {
+			@include span-columns(9 of 12, block-collapse);
+			height: 100vh;
+			background-color: lighten($DarkGrey, 69%);
+
+			//Mobile
+				@include media($mobile) {
+					@include span-columns(12, block-collapse);
+					
+				}
+		}
+	}
+
+
+
+
+}
+
+
+/*==============================================
+=        ENDS ::  Admin Landlord Section       =
+==============================================*/

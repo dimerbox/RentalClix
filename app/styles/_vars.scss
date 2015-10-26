@@ -1,0 +1,35 @@
+//=====================================
+//=            Colour Themes          =
+//=====================================
+$DarkPurple			: #412F54;
+$LimeGreen			: #99CC66;
+$LightGrey			: #F1F1F1;
+$DarkGrey			: #4A4A4A;
+
+//Sub Colours
+$Orange				: #F2A612;
+$Red				: #D13535;
+
+//====================================
+//=            Font Family           =
+//====================================
+$font-Lato 			: 'Lato', sans-serif;
+$font-Roboto-Slab	: 'Roboto Slab', serif;
+
+//====================================
+//=            Font Sizes            =
+//====================================
+$MainTitles			: em(36);
+$SubTitles			: em(19.5);
+$StandardTxt		: em(21);
+$SiteTxt			: em(16.7);
+
+//====================================
+//=           Media Queries          =
+//====================================
+$mobile: new-breakpoint(max-width 500px);
+
+
+
+
+
