@@ -8,7 +8,6 @@
 		@include span-columns(12);
 		background-color: $DarkPurple;
 		height: em(95);
-
 	}
 
 	.site-ctn-wrap {
@@ -19,19 +18,20 @@
 			@include span-columns(3 of 12, block-collapse);
 			background-color: $LightGrey;
 			height: 100vh;
+			border-right: 3px solid lighten($DarkGrey, 58%);
 			
 			li {
 				text-align: center;
+				font-weight: 300;
 
 				&:hover {
 					background-color: $LimeGreen;
-
 				}
 
 				a {
 				color: $DarkGrey;
 				font-size: $StandardTxt;
-				line-height: em(40);
+				line-height: em(55);
 				text-align: center;
 				display: block;
 				transition: none;
@@ -41,17 +41,13 @@
 						color: #FFF;
 						background-color: $LimeGreen;
 					}
-			}
-			}
-
-
+				}
+			}//ends li
 
 				//Mobile
 				@include media($mobile) {
 					display: none;
-
 				}
-
 		}
 
 		main {
@@ -59,20 +55,59 @@
 			height: 100vh;
 			background-color: lighten($DarkGrey, 69%);
 
-			//Mobile
+				//Mobile
 				@include media($mobile) {
-					@include span-columns(12, block-collapse);
+				@include span-columns(12, block-collapse);
 					
 				}
 		}
+
+			// Hero Panel for each section
+			.hero-panel {
+				@include span-columns(12);
+				@include H2Headings();
+				background-color: $LightGrey;
+				height: em(355);
+				border-bottom: 3px solid lighten($DarkGrey, 58%);
+				padding: 1.5em 1.5em;
+				
+
+					.welcome {
+						@include span-columns(8 of 12);
+					}
+
+					.searchbox {
+						@include span-columns(4 of 12);
+					}
+
+					.ico-container {
+						@include span-columns(12);
+
+							.app, .payments, .request {
+								@include span-columns(4 of 12);
+								@extend %CircleTxt;
+								@include omega();
+							}
+
+								.circle-icos {
+									@extend %CircleIco;
+									display: block;
+									margin: 0 auto;
+									padding: 1.4em 0;
+							
+								}
+							
+					}
+			}
 	}
-
-
-
 
 }
 
-
+body > div.admin-landlord > div > main > div > div.welcome > div > div.app > a:hover {
+	color: red;
+    fill: red;
+		
+}
 /*==============================================
 =        ENDS ::  Admin Landlord Section       =
 ==============================================*/

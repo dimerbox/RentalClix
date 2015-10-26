@@ -1,5 +1,38 @@
-%H2Headings {
-	font-family: $font-Roboto-Slab;
-	font-size: $MainTitles;
-	color: $DarkGrey;
+//Begins :: Circle Ico & Subheading Titles Set
+%CircleIco {
+	background-color: $DarkPurple;
+	box-shadow: 7px 5px 0px 0px rgba(0,0,0,0.11);
+	border-radius: 100%;
+	height: em(128);
+	width: em(128);
+	display: block;
+		
+		&:hover {
+			background-color: #fff;
+			line-height: 128px;
+		}
+	
+		svg {
+			fill: #fff;
+			width: em(80);
+			height: em(80);
+			display: block;
+			margin: 0 auto;		
+			}
+}		
+
+
+
+
+%CircleTxt {
+			p {
+		text-align: center;
+		padding-top: 0.5em;
+		font-weight: 300;
+
+			span {
+			font-weight: 600;
+			}
+		}
 }
+//Ends :: Circle Ico & Subheading Titles Set

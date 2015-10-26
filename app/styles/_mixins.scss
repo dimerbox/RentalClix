@@ -1,8 +1,20 @@
-@mixin FontStyle ($fc, $s, $ff) {
+@mixin H2Headings {
+	
+	h2 {
+	font-family: $font-Roboto-Slab;
+	font-size: $MainTitles;
+	color: $DarkGrey;
+	}
 
-color: $fc;
-font-size: $s;
-font-family: $ff;
+	h3 {
+	font-family: $font-Lato;
+	font-size: $SubTitles;
+	font-weight: 300;
+	position: relative;
+	top: -1.2em;
 
-};
-
+		span {
+			color: darken($LightGrey, 35%);
+		}
+	}
+}
