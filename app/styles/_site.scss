@@ -12,7 +12,6 @@
 
 	.site-ctn-wrap {
 		@include outer-container(100%);
-
 		
 		nav {
 			@include span-columns(3 of 12, block-collapse);
@@ -24,8 +23,13 @@
 				text-align: center;
 				font-weight: 300;
 
+
 				&:hover {
 					background-color: $LimeGreen;
+				}
+
+				li a:nth-last-child(n+2) {
+					text-decoration: underline;
 				}
 
 				a {
@@ -87,27 +91,35 @@
 								@include span-columns(4 of 12);
 								@extend %CircleTxt;
 								@include omega();
-							}
-
-								.circle-icos {
-									@extend %CircleIco;
-									display: block;
-									margin: 0 auto;
-									padding: 1.4em 0;
-							
+									
+									.circle-icos {
+										@extend %CircleIco;
+										display: block;
+										margin: 0 auto;
+										padding: 1.4em 0;
 								}
-							
+								a {
+									color: $DarkGrey;
+								}
+								a:hover {
+									color: $DarkGrey;
+								}	
+
+								a:hover svg {
+									fill: $DarkPurple;
+								}
+
+								a:hover .circle-icos {
+									background-color: #fff;
+								}
+							}
+			
 					}
 			}
 	}
-
 }
 
-body > div.admin-landlord > div > main > div > div.welcome > div > div.app > a:hover {
-	color: red;
-    fill: red;
-		
-}
+
 /*==============================================
 =        ENDS ::  Admin Landlord Section       =
 ==============================================*/
