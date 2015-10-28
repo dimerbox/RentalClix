@@ -37,7 +37,6 @@
 
 				}
 				
-
 				@include span-columns(4 of 12);
 				color: #fff;
 				float: right;
@@ -88,8 +87,6 @@
 
 			}//Ends Notify Section
 	}//Ends Header
-
-
 
 	.site-ctn-wrap {
 		@include outer-container(100%);
@@ -176,11 +173,29 @@
 				
 
 					.welcome {
-						@include span-columns(8 of 12);
+						@include span-columns(7 of 12);
 					}
 
 					.searchbox {
-						@include span-columns(4 of 12);
+						@include span-columns(5 of 12);
+
+								.search-bar {
+									margin-top: 3.65em;
+
+										input[type=search] {
+											@include span-columns(9, block-collapse);
+											@include omega();
+										}
+
+										button[type=submit] {
+											@include span-columns(3, block-collapse);
+											@include omega();
+
+												&:hover {
+													background-color: lighten($DarkPurple, 1%);
+												}
+										}
+ 								}
 					}
 
 					.ico-container {
