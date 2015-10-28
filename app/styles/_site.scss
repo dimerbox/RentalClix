@@ -3,7 +3,7 @@
 ==============================================*/
 .admin-landlord {
 	
-	//Top Header
+	//Header
 	header	{
 		@include span-columns(12);
 		background-color: $DarkPurple;
@@ -22,7 +22,38 @@
 						}
 				 }
 			}
-	}
+			
+			//Notify Section & Profile Image
+			.notify {
+				@include span-columns(4 of 12);
+				color: #fff;
+				float: right;
+
+				.add, .messages, .active, .profile {
+					@include span-columns(1 of 4);
+				}
+
+				.add, .messages, .active {
+					background-color: lighten($DarkPurple, 10%);
+					height: em(95);
+					@include omega();
+					margin: 0 em(3);
+					text-align: center;
+				}
+
+				svg {
+					fill: #fff;
+					height: 40%;
+					width: 40%;
+					@include vertical-align;
+
+				}
+
+
+			}//Ends Notify Section
+	}//Ends Header
+
+
 
 	.site-ctn-wrap {
 		@include outer-container(100%);
@@ -34,35 +65,47 @@
 			height: 100vh;
 			border-right: 3px solid lighten($DarkGrey, 58%);
 			
-			
-			li {
+
+			ul.sidebar li {
+				display: block;
+				position: relative;
 				font-weight: 300;
-
+				line-height: em(60);
+			}
 				
-				
+			ul.sidebar li a {
+				display: block;
+				margin: 0 auto;
+				width: em(110);
+				text-align: left;
+				line-height: em(56);
+			}
 
-					&:nth-last-child(n+2) {
-					border-bottom: 1px solid lighten($DarkGrey, 60%);
-				}
-
-
-				&:hover {
-					background-color: $LimeGreen;
-				}
-
-
-				a {
+			a {
 				color: $DarkGrey;
 				font-size: 1em;
-				line-height: em(55);				
+				line-height: 56px;				
 				transition: none;
-				display: block;
+				display: inline-block;
 
 					&:hover {
 						color: #FFF;
 						background-color: $LimeGreen;
 					}
 				}
+
+			li {	
+					//Nav Underlines
+					&:nth-last-child(n+2) {
+					border-bottom: 1px solid lighten($DarkGrey, 60%);
+				}
+
+
+					&:hover {
+						background-color: $LimeGreen;
+					}
+
+
 			}//ends li
 
 				//Mobile
@@ -73,9 +116,6 @@
 				}
 		}
 
-
-
-
 		main {
 			@include span-columns(10 of 12, block-collapse);
 			height: 100vh;
@@ -84,8 +124,6 @@
 				//Mobile
 				@include media($mobile) {
 				@include span-columns(12, block-collapse);
-
-					
 				}
 		}
 
@@ -122,7 +160,9 @@
 										display: block;
 										margin: 0 auto;
 										padding: 1.4em 0;
-								}
+									}
+
+
 								a {
 									color: $DarkGrey;
 								}
@@ -137,17 +177,14 @@
 								a:hover .circle-icos {
 									background-color: #fff;
 								}
-							}
-					}
-			}
-	}
-}
 
+							}//Ends app/payment/request
 
-.a {
-					// display: inline-block;
-					text-align: center;
-				}
+					}// Ends Ico Container
+			}//Ends Hero Panel
+
+	} // Ends Site Ctn Wrap
+} //Ends Admin Section
 
 /*==============================================
 =        ENDS ::  Admin Landlord Section       =
