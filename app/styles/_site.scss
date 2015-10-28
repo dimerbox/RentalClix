@@ -8,6 +8,20 @@
 		@include span-columns(12);
 		background-color: $DarkPurple;
 		height: em(95);
+
+			.logo {
+				@include span-columns(3 of 12);
+				padding: 1em 0 0 1.5em;
+
+				 @include media($mobile){
+					@include span-columns(12 of 12);
+						
+						img {
+							display: block;
+							margin: 0 auto;
+						}
+				 }
+			}
 	}
 
 	.site-ctn-wrap {
@@ -20,11 +34,12 @@
 			height: 100vh;
 			border-right: 3px solid lighten($DarkGrey, 58%);
 			
+			
 			li {
-				// text-align: left;
 				font-weight: 300;
 
-
+				
+				
 
 					&:nth-last-child(n+2) {
 					border-bottom: 1px solid lighten($DarkGrey, 60%);
@@ -37,16 +52,11 @@
 
 
 				a {
-				@extend %SidebarIcos;
 				color: $DarkGrey;
-				font-size: $StandardTxt;
-				line-height: em(55);
-				text-align: left;
-				display: block;
+				font-size: 1em;
+				line-height: em(55);				
 				transition: none;
-				padding-left: 3.2em;
-
-
+				display: block;
 
 					&:hover {
 						color: #FFF;
@@ -57,7 +67,9 @@
 
 				//Mobile
 				@include media($mobile) {
-					display: none;
+					width: 100px;
+			
+
 				}
 		}
 
@@ -72,6 +84,7 @@
 				//Mobile
 				@include media($mobile) {
 				@include span-columns(12, block-collapse);
+
 					
 				}
 		}
@@ -84,6 +97,8 @@
 				height: em(355);
 				border-bottom: 3px solid lighten($DarkGrey, 58%);
 				padding: 1.5em 1.5em;
+				background-image: url(../images/hero-area-bg.png);
+				background-position: center middle;
 				
 
 					.welcome {
@@ -128,9 +143,11 @@
 	}
 }
 
-.icon-complaints svg {
-	fill: red;
-}
+
+.a {
+					// display: inline-block;
+					text-align: center;
+				}
 
 /*==============================================
 =        ENDS ::  Admin Landlord Section       =
