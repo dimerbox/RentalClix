@@ -25,6 +25,19 @@
 			
 			//Notify Section & Profile Image
 			.notify {
+
+				.notify-circles {
+					@extend %NotifyCircles;
+					top: 2.4em;
+					left: -0.6em;
+
+						p {
+							@include vertical-align;
+						}
+
+				}
+				
+
 				@include span-columns(4 of 12);
 				color: #fff;
 				float: right;
@@ -39,6 +52,31 @@
 					@include omega();
 					margin: 0 em(3);
 					text-align: center;
+					width: em(70);
+					// position: relative;
+					z-index: 1;
+				}
+
+				.profile { 
+						height: em(95);
+						margin-left: 2em;
+					
+					img {
+						border-radius: 100%;
+						@include vertical-align;
+					}
+				}
+
+				.messages {
+					svg {
+						margin-left: 1em;
+					}
+				}
+
+				.active {
+					svg {
+						margin-left: 1em;
+					}
 				}
 
 				svg {
@@ -46,9 +84,7 @@
 					height: 40%;
 					width: 40%;
 					@include vertical-align;
-
 				}
-
 
 			}//Ends Notify Section
 	}//Ends Header
